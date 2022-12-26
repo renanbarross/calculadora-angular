@@ -1,0 +1,40 @@
+<div class="calculadora">
+  <input type="text" [class.tela]="piscada == true" [value]="numero" readonly>
+
+  <div class="linha">
+    <button type="button" style="visibility: hidden"></button>
+    <button type="button" style="visibility: hidden"></button>
+    <button type="button" class="btn btn-light" (click)="limpar()" tooltip="Limpar" placement="left">ce</button>
+    <button type="button" style="font-size: 1.25rem" class="btn btn-light" (click)="backspace()" tooltip="Backspace"
+      placement="right"><i class="bi bi-arrow-left"></i></button>
+  </div>
+  <div class="linha">
+    <button type="button" class="btn btn-light" #numero7 value="7" (click)="getNumero(numero7.value)">7</button>
+    <button type="button" class="btn btn-light" #numero8 value="8" (click)="getNumero(numero8.value)">8</button>
+    <button type="button" class="btn btn-light" #numero9 value="9" (click)="getNumero(numero9.value)">9</button>
+    <button type="button" class="btn btn-light" tooltip="Dividir" placement="right" #divisao value="/"
+      (click)="usarOperador(divisao.value)">÷</button>
+  </div>
+  <div class="linha">
+    <button type="button" class="btn btn-light" #numero4 value="4" (click)="getNumero(numero4.value)">4</button>
+    <button type="button" class="btn btn-light" #numero5 value="5" (click)="getNumero(numero5.value)">5</button>
+    <button type="button" class="btn btn-light" #numero6 value="6" (click)="getNumero(numero6.value)">6</button>
+    <button type="button" class="btn btn-light" tooltip="Multiplicar" placement="right" #multiplicacao value="*"
+      (click)="usarOperador(multiplicacao.value)"><i class="bi bi-x"></i></button>
+  </div>
+  <div class="linha">
+    <button type="button" class="btn btn-light" #numero1 value="1" (click)="getNumero(numero1.value)">1</button>
+    <button type="button" class="btn btn-light" #numero2 value="2" (click)="getNumero(numero2.value)">2</button>
+    <button type="button" class="btn btn-light" #numero3 value="3" (click)="getNumero(numero3.value)">3</button>
+    <button type="button" class="btn btn-light" tooltip="Subtrair" placement="right" #subtracao value="-"
+      (click)="usarOperador(subtracao.value)"><i class="bi bi-dash"></i></button>
+  </div>
+  <div class="linha">
+    <button type="button" class="btn btn-light" #numero0 value="0" (click)="getNumero(numero0.value)">0</button>
+    <button type="button" class="btn btn-light" #ponto value="." (click)="getNumero(ponto.value)">.</button>
+    <button type=" button" class="btn btn-light" tooltip="Mostrar resultado" placement="bottom"
+      (click)="mostrarResultado()">=</button>
+    <button type="button" class="btn btn-light" tooltip="Somar" placement="right" #soma value="+"
+      (click)="usarOperador(soma.value)">+</button>
+  </div>
+</div>

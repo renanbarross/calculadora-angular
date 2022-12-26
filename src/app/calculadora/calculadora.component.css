@@ -1,0 +1,56 @@
+.calculadora {
+  height: 30rem;
+  width: 20rem;
+  background-color: rgb(129, 129, 129);
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.tela {
+  animation-duration: 0.1s;
+  animation-name: piscada;
+}
+
+@keyframes piscada {
+  from {
+    color: black;
+  }
+
+  50% {
+    color: white;
+  }
+
+  to {
+    color: black;
+  }
+}
+
+
+div>input {
+  height: 3rem;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+div>button {
+  height: 3rem;
+  width: 3rem;
+  /* background-color: rgb(241, 241, 241); */
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+
+.linha {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
